@@ -1,4 +1,7 @@
 function calculateMoney(ticket) {
+    if (typeof ticket !== "number") {
+        return "Invalid Number"
+    }
     const ticketPrice = 120;
     const earnMoney = ticketPrice * ticket
     const gurdFee = 500;
@@ -7,12 +10,9 @@ function calculateMoney(ticket) {
     const stuffLunchFee = lunchFee * stuff;
     const cost = gurdFee + stuffLunchFee;
     const totalEarn = earnMoney - cost
-
-    if (ticket < 0 && ticket !== "number") {
-        return "Invalid Number"
+    if (totalEarn <0) {
+        return 'Error'
     }
-    else{
-        return totalEarn;
-    }
+    return totalEarn;
 }
-console.log(calculateMoney(1055));
+console.log(calculateMoney(100));
