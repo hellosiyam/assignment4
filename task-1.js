@@ -15,4 +15,4 @@ function calculateMoney(ticket) {
     }
     return totalEarn;
 }
-console.log(calculateMoney(100));
+console.log(calculateMoney(-10));
