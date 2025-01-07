@@ -15,10 +15,12 @@
 // console.log(password({ name: "kolimuddin" , birthYear: 1020 , siteName: "google" }));
 
 function password(numbers) {
+    let number = Object.keys(numbers).length  
     let strBirth = numbers.birthYear.toString();
-    if (strBirth.length < 4) {
+    if (strBirth.length < 4 || number < 3) {
         return "Error";
     }
+    
     const nam = numbers.name;
     const birth = numbers.birthYear;
     const site = numbers.siteName
@@ -28,5 +30,5 @@ function password(numbers) {
     
     
 }
-console.log(password({ name: "kolimuddin" , birthYear: 1099 , siteName: "google" }));
+console.log(password({name: "kolimuddin"  , birthYear: 1099 , siteName: "google"}));
 
